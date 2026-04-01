@@ -7,6 +7,7 @@ import subjectRoutes from './routes/subjectRoutes.js';
 import topicRoutes from './routes/topicRoutes.js';
 import contentRoutes from './routes/contentRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import statsRoutes from './routes/statsRoutes.js';
 
 dotenv.config();
 
@@ -33,22 +34,24 @@ app.get("/api/test", (req, res) => {
 
 app.get("/fix-admin", async (req, res) => {
   const bcrypt = (await import("bcrypt")).default;
-  const User = (await import("./models/userModel.js")).default;
+  const User = (await import("./models/User.js")).default;
 
   const hashedPassword = await bcrypt.hash("123456", 10);
 
-  await User.findOneAndUpdate(
+  const adminUser = await User.findOneAndUpdate(
     { email: "admin@gmail.com" },
-    { password: hashedPassword, role: "admin" }
+    { $set: { password: hashedPassword, role: "admin", name: "System Admin" } },
+    { upsert: true, new: true }
   );
 
-  res.send("Admin fixed 🔥");
+  res.send("Admin fixed 🔥 " + adminUser.email);
 });
 app.use('/api/auth', authRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/topics', topicRoutes);
 app.use('/api/content', contentRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/stats', statsRoutes);
 
 const PORT = process.env.PORT || 5000;
 
