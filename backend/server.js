@@ -15,13 +15,11 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: [
-    "https://syallabus-management-system-ygp8-o06ftjg6b-rattans-projects.vercel.app",
-    "https://syallabus-management-system-ygp8-rattans-projects.vercel.app",
-    "https://syallabus-management-system-rattans-projects.vercel.app",
-    "https://syallabus-management-system.vercel.app",
-    "http://localhost:5173"
-  ],
+  origin: function(origin, callback) {
+    // allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());
