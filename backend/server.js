@@ -14,7 +14,10 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://syallabus-management-system-ygp8-o06ftjg6b-rattans-projects.vercel.app/login",
+  credentials: true
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
