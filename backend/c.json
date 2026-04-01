@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "69cc31ef930a893707592f2b",
+    "topicId": "69cc2b71ba67d750b1d84b07",
+    "videos": [
+      {
+        "title": "heat",
+        "url": "https://youtu.be/EUi2IUihBSI?si=_uWt2JdbVaJA72RV",
+        "duration": "",
+        "_id": "69cc31ef930a893707592f2c"
+      }
+    ],
+    "notes": [
+      {
+        "title": "print.pdf",
+        "url": "https://res.cloudinary.com/dlhfmb8gi/raw/upload/v1774989804/cds_notes/yesusoqjkrf8hxoviu6c",
+        "filename": "cds_notes/yesusoqjkrf8hxoviu6c",
+        "_id": "69cc31ef930a893707592f2d"
+      }
+    ],
+    "createdAt": "2026-03-31T20:43:27.772Z",
+    "updatedAt": "2026-03-31T20:43:27.772Z",
+    "__v": 0
+  },
+  {
+    "_id": "69cc37838215c953d4e94a95",
+    "topicId": "69cc37318215c953d4e94a8d",
+    "videos": [
+      {
+        "title": "Microeconomics ",
+        "url": "https://www.youtube.com/live/_V98PR54_qc?si=aaoJao-e1Mjp5ygq",
+        "duration": "",
+        "_id": "69cc37838215c953d4e94a96"
+      },
+      {
+        "title": "micro",
+        "url": "https://www.youtube.com/live/xbe5b0cdw84?si=MZB70Ejl3rlGbSwe",
+        "duration": "",
+        "_id": "69cc37d08215c953d4e94ab6"
+      }
+    ],
+    "notes": [
+      {
+        "title": "ch1 eco.pdf",
+        "url": "https://res.cloudinary.com/dlhfmb8gi/raw/upload/v1774991232/cds_notes/zbrbetm19kbzojhukev5",
+        "filename": "cds_notes/zbrbetm19kbzojhukev5",
+        "_id": "69cc37838215c953d4e94a97"
+      }
+    ],
+    "createdAt": "2026-03-31T21:07:15.956Z",
+    "updatedAt": "2026-03-31T21:08:32.850Z",
+    "__v": 1
+  },
+  {
+    "_id": "69cc381c8215c953d4e94ada",
+    "topicId": "69cc38068215c953d4e94ad2",
+    "videos": [
+      {
+        "title": "moneyyy",
+        "url": "https://www.youtube.com/live/xbe5b0cdw84?si=MZB70Ejl3rlGbSwe",
+        "duration": "",
+        "_id": "69cc381c8215c953d4e94adb"
+      }
+    ],
+    "notes": [
+      {
+        "title": "ch1 eco.pdf",
+        "url": "https://res.cloudinary.com/dlhfmb8gi/raw/upload/v1774991385/cds_notes/bgn2eqpkq7m1mdvfu8gd",
+        "filename": "cds_notes/bgn2eqpkq7m1mdvfu8gd",
+        "_id": "69cc381c8215c953d4e94adc"
+      }
+    ],
+    "createdAt": "2026-03-31T21:09:48.250Z",
+    "updatedAt": "2026-03-31T21:09:48.250Z",
+    "__v": 0
+  }
+]
