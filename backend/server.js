@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: function(origin, callback) {
+  origin: function (origin, callback) {
     // allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     return callback(null, true);
@@ -36,10 +36,10 @@ app.get("/fix-admin", async (req, res) => {
   const bcrypt = (await import("bcrypt")).default;
   const User = (await import("./models/User.js")).default;
 
-  const hashedPassword = await bcrypt.hash("123456", 10);
+  const hashedPassword = await bcrypt.hash("RATTAN@27", 10);
 
   const adminUser = await User.findOneAndUpdate(
-    { email: "admin@gmail.com" },
+    { email: "Jerryxone@gmail.com" },
     { $set: { password: hashedPassword, role: "admin", name: "System Admin" } },
     { upsert: true, new: true }
   );
@@ -56,5 +56,5 @@ app.use('/api/stats', statsRoutes);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
