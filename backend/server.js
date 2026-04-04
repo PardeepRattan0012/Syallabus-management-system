@@ -36,10 +36,10 @@ app.get("/fix-admin", async (req, res) => {
   const bcrypt = (await import("bcrypt")).default;
   const User = (await import("./models/User.js")).default;
 
-  const hashedPassword = await bcrypt.hash("RATTAN@27", 10);
+  const hashedPassword = await bcrypt.hash("12345", 10);
 
   const adminUser = await User.findOneAndUpdate(
-    { email: "Jerryxone@gmail.com" },
+    { email: "admin@gmail.com" },
     { $set: { password: hashedPassword, role: "admin", name: "System Admin" } },
     { upsert: true, new: true }
   );
