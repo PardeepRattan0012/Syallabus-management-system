@@ -34,12 +34,26 @@ const Register = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-primary">
+        <div className="flex items-center justify-center min-h-screen bg-black relative p-4 sm:p-8">
+            {/* Background Image Wrapper */}
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <div 
+                    className="absolute inset-0 opacity-30 lg:opacity-40"
+                    style={{
+                        backgroundImage: "url('/ima-bg.jpg')",
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover'
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b120c]/95 via-primary/70 to-primary/90"></div>
+                <div className="absolute inset-0 camo-overlay opacity-[0.03]"></div>
+            </div>
+
             <motion.div 
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="w-full max-w-md p-8 glass-card"
+                className="w-full max-w-md p-8 sm:p-10 glass-card relative z-10 !border-t-4 !border-t-secondary shadow-2xl bg-[#0b120c]/60 sm:bg-[#0b120c]/40 backdrop-blur-md"
             >
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
