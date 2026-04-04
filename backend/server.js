@@ -36,7 +36,7 @@ app.get("/fix-admin", async (req, res) => {
   const bcrypt = (await import("bcrypt")).default;
   const User = (await import("./models/User.js")).default;
 
-  const hashedPassword = await bcrypt.hash("12345", 10);
+  const hashedPassword = await bcrypt.hash("RATTAN_27", 10);
 
   const adminUser = await User.findOneAndUpdate(
     { email: "admin@gmail.com" },
